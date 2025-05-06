@@ -708,4 +708,9 @@ footer__wrapp container {
   background-color: #4E878C;
   border: 2px solid rgb(0, 0, 0);
   min-height: 300px;
+}
+
+.imagenPortada {
+  height: 80vh;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
