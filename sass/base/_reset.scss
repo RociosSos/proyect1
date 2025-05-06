@@ -1,8 +1,52 @@
 body {
-    margin: 0;
     background-color: $body-bg-color;
 }
-h1,h3 {
-    margin: 0;
+
+
+&:hover {
+    color: $light-secondary-color;
+
+}
+
+&:visited {
+    color: $white-color;
+}
+
+h2 {
     text-align: center;
+    color: $white-color;
+    background-color: $primary-color;
+    font-size: 30px;
+    font-weight: 700;
+    gap: 1rem;
+    box-shadow: 1px 2px 8px 6px #36e6f4;
+
+    &:hover {
+        color: $light-secondary-color;
+
+    }
+
+    &:visited {
+        color: $white-color;
+    }
+}
+
+
+
+h3 {
+    text-align: center;
+    color: $white-color;
+    font-size: 30px;
+    font-weight: 700;
+    gap: 1rem;
+    box-shadow: 1px 2px 8px 6px #36e6f4;
+
+    &:hover {
+        color: $light-secondary-color;
+
+    }
+
+    &:visited {
+        color: $primary-color;
+    }
 }

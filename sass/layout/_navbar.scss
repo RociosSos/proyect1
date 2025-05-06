@@ -3,6 +3,7 @@
     min-height: 4.5rem;
     padding: 0.5rem 1rem;
     margin: 0 auto;
+    border: 12px ridge, #4E878C;
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -17,10 +18,12 @@
             }
 
             a {
-                text-transform:none;
+                text-transform: none;
                 color: $light-secondary-color;
+
                 &:hover {
                     color: $white-color;
+
                     &:visited {
                         color: $primary-color;
                     }
