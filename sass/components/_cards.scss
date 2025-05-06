@@ -1,0 +1,8 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background-color: $strong-primary-color;
+    border: 2px solid $black-color;
+min-height: 300px;
+}

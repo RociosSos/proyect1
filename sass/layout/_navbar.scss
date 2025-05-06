@@ -1,0 +1,32 @@
+.navbar_container {
+    background-color: $navbar-bg-color;
+    min-height: 4.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+
+    .navbar_navigation {
+        ul {
+            display: flex;
+            gap: 1rem;
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                text-transform:none;
+                color: $light-secondary-color;
+                &:hover {
+                    color: $white-color;
+                    &:visited {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+        }
+    }
+}

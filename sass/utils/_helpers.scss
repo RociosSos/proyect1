@@ -1,0 +1,27 @@
+$spacings: (
+    m: margin,
+    mt: margin-top,
+    mb: margin-bottom,
+    ml: margin-left,
+    mr: margin-right,
+    p: padding,
+    pt: padding-top,
+    pb: padding-bottom,
+    pl: padding-left,
+    pr: padding-right
+);
+
+@each $key, $prop in $spacings {
+    @for $i from 0 through 12 {
+        .#{$key}-#{$i} {
+            #{$prop}: $i * 0.25rem;
+        }
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+.space-between {
+    justify-content: space-between;
+}

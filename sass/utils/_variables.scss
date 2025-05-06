@@ -1,0 +1,61 @@
+$gridbreakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$grid-width: (
+    xs: 360px,
+    sm: 520px,
+    md: 720px,
+    lg: 880px,
+    xl: 1120px,
+    xxl: 1280px
+);
+
+
+$primary-color: #00241B;
+$strong-primary-color: #4E878C;
+$light-primary-color: #06687e;
+
+$secondary-color: #93E5AB;
+$strong-secondary-color: #00241B;
+$light-secondary-color: #65B891;
+
+$white-color: rgb(255, 255, 255);
+$black-color: rgb(0, 0, 0);
+
+$success-color: rgb(76, 175, 80);
+$warning-color: rgb(255, 152, 0);
+$error-color: rgb(244, 67, 54);
+$info-color: rgb(33, 150, 243);
+
+//layout
+$body-bg-color: $light-secondary-color;
+$navbar-bg-color: $strong-secondary-color;
+
+//grid
+$grid-columns: 12;
+
+
+
+//spacings
+
+$spacings: (
+    m: margin,
+    mt: margin-top,
+    mb: margin-bottom,
+    ml: margin-left,
+    mr: margin-right,
+    p: padding,
+    pt: padding-top,
+    pb: padding-bottom,
+    pl: padding-left,
+    pr: padding-right
+);
+
+//footer
+$footer-bg-color: $white-color; 
