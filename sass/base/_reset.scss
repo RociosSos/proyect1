@@ -1,16 +1,12 @@
 body {
+    font-family: "Cal Sans", sans-serif;
     background-color: $body-bg-color;
-margin: 2rem;}
-
-
-&:hover {
-    color: $light-secondary-color;
-
+    margin: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
 }
 
-&:visited {
-    color: $white-color;
-}
 
 h2 {
     text-align: center;
@@ -35,7 +31,6 @@ h2 {
 
 h3 {
     text-align: center;
-    color: $white-color;
     font-size: 30px;
     font-weight: 700;
     gap: 1rem;
