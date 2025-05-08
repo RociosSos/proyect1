@@ -62,9 +62,12 @@ $spacings: (
 
 // //boxshadow//
 
-// $box-shadow: 1px 2px 8px 6px #36e6f4;
-// $box-shadow-2: 2px 2px 10px 7px #0c483b;
-// $box-shadow-3: 4px 4px 4px #21f3df;
-// $box-shadow-4: 2px 2px 5px 8px #0c483b;
-// //footer
-// $footer-bg-color: $white-color; 
+ $box-shadow: 1px 2px 8px 6px #36e6f4;
+ $box-shadow-2: 2px 2px 10px 7px #0c483b;
+ $box-shadow-3: 4px 4px 4px #21f3df;
+ $box-shadow-4: 2px 2px 5px 8px #0c483b;
+
+ //footer
+
+$footer-bg-color: $white-color; 
+$footer-socialmedia:$light-primary-color

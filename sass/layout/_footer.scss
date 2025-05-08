@@ -1,14 +1,30 @@
-footer__container {
-  background-color: white;
-  padding: 20px;
-  text-align: center;
+.footer__container {
+  background-color: $primary-color;
+  padding: 1rem; 
+  display: flex; 
+  margin:30px;
+  border-radius: 3rem;
+
+  border: 8px solid $strong-primary-color;
+  box-shadow: $box-shadow-4;
+  justify-content: space-between; 
+  align-items: center; 
 }
 
-footer__wrapp container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
+.footer__wrapp {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+font-size: 15px;
+}
 
+.footer__socialmedia-links {
+  color: $white-color; // Color de los íconos
+  font-size: 1.5rem; // Tamaño de los íconos
+  margin-left: 1rem; // Espaciado entre los íconos
+  text-decoration: none;
+
+  &:hover {
+      color: $light-primary-color; // Cambia el color al pasar el cursor
+  }
 }

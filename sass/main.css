@@ -701,18 +701,33 @@ h3:visited {
   grid-column: span 12;
 }
 
-footer__container {
-  background-color: white;
-  padding: 20px;
-  text-align: center;
+.footer__container {
+  background-color: #00241B;
+  padding: 1rem;
+  display: flex;
+  margin: 30px;
+  border-radius: 3rem;
+  border: 8px solid #4E878C;
+  box-shadow: 2px 2px 5px 8px #0c483b;
+  justify-content: space-between;
+  align-items: center;
 }
 
-footer__wrapp container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.footer__wrapp {
   display: flex;
-  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  font-size: 15px;
+}
+
+.footer__socialmedia-links {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+.footer__socialmedia-links:hover {
+  color: #06687e;
 }
 
 .button {
