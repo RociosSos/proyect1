@@ -1,12 +1,15 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu__container"); // Asegúrate de que sea el contenedor correcto
 
-let showMenu = false;
+    menuToggle.addEventListener("click", function() {
+        menu.classList.toggle("show"); // Añadir o quitar la clase 'show' para mostrar/ocultar el menú
+    });
 
-const handleMenu = () => {
-    const menu = document.getElementById("mobile_menu")
-    if (showMenu) {
-        menu.className = menu.className.replace("-visible", "")
-    } else {
-        menu.className = menu.className.concat("-visible")
-    }
-    showMenu = !showMenu
-}
+    // Cerrar el menú si se hace clic fuera de él
+    document.addEventListener("click", function(event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.remove("show"); // Eliminar la clase 'show' para ocultar el menú
+        }
+    });
+});

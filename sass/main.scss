@@ -8,11 +8,11 @@
 @import "base/reset";
 
 
+@import "layout/header";
+@import "layout/grid";
+@import "layout/footer";
 @import "layout/navbar";
 @import "layout/menu";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
 
 @import "components/slider";
 @import "components/buttons";

@@ -1,39 +1,49 @@
-
-
 .menu__container {
-    display: none;
-    &-visible {
-        background-color: $strong-secondary-color;
-        box-shadow: 2px 2px 8px 8px $light-secondary-color;
-        display: block;
-        height: calc(100vh - 4.5rem);
-        left: 0;
-        position: fixed;
-        padding-right: 1rem;
-        width: 12rem;
-        z-index: 1;
-        @media screen and (min-width: map-get($grid-breakpoints, md)) {
-            display: none;
-        }
-        .menu__navigation {
-            ul {
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-                li {
-                    list-style: none;
-                    a {
-                        text-decoration: none;
-                        color: $white-color;
-                        &:hover {
-                            color: $strong-primary-color;
-                        };
-                        &:visited {
-                            color: $light-primary-color;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: $menu-bg-color;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 9999;
+}
+
+.menu__container.show {
+    transform: translateX(0);
+}
+
+.menu__navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__navigation li {
+    padding: 10px;
+}
+
+.menu__navigation a {
+    color: $white-color;
+    border: 4px groove $menu-border-color;
+    border-right: 5px transparent;
+    border-left: 5px transparent;
+    padding: 4px;
+    margin: 12px;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto hover */
+.menu__navigation a:hover {
+    color: $light-secondary-color; /* Cambia color al pasar el mouse */
+    border-color: $light-secondary-color; /* Cambia el color del borde */
+}
+
+/* Efecto visited */
+.menu__navigation a:visited {
+    color: $primary-color; /* Cambia color cuando ya fue visitado */
+    border-color: $primary-color; /* Cambia el color del borde */
 }

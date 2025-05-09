@@ -13,7 +13,7 @@ $grid-width: (
     md: 720px,
     lg: 880px,
     xl: 1120px,
-    xxl: 1280px
+    xxl: 1200px
 );
 
 
@@ -21,9 +21,11 @@ $primary-color: #00241B;
 $strong-primary-color: #4E878C;
 $light-primary-color: #06687e;
 
+
 $secondary-color: #93E5AB;
 $strong-secondary-color: #00241B;
 $light-secondary-color: #65B891;
+
 
 $white-color: rgb(255, 255, 255);
 $black-color: rgb(0, 0, 0);
@@ -36,6 +38,13 @@ $info-color: rgb(33, 150, 243);
 //layout
 $body-bg-color: $light-secondary-color;
 $navbar-bg-color: $strong-secondary-color;
+
+//menu
+$menu-bg-color: #1f5458a3;
+$menu-border-color: #deebee70;
+$menu-border-radius: 0.5rem;
+
+
 
 //grid
 $grid-columns: 12;

@@ -1,36 +1,56 @@
 .navbar_container {
-    background-color: $navbar-bg-color;
-    margin: 0 auto;
-    border: 12px ridge,$strong-primary-color;
-    max-width: 100%;
-    align-items: center;
+  position: relative;
+  background-color: $navbar-bg-color;
+  padding: 3rem;
+  border: 6px double $strong-primary-color;
+  box-shadow: $box-shadow-4;
+}
 
-    .navbar_navigation {
-        ul {
-            text-align: right;
-            margin-right: 40px;
-            display: flex;
-            gap: 4rem;
-            justify-content: flex-end;
+.navbar_content {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+}
 
-            li {
-                list-style: none;
-            }
+.navbar_content h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white-color;
+  margin: 0;
+  font-size: 3rem; // letra mucho más grande
+  border-bottom: 3px solid $white-color; // subrayado
+  padding-bottom: 0.3rem;
+  transition: color 0.3s ease, transform 0.3s ease; // transiciones suaves
 
-            a {
-                font-size: 20px;
-                text-decoration: none;
-                color: $light-secondary-color;
+  // Hover: cambio de color cuando el mouse pasa por encima
+  &:hover {
+    color: $light-secondary-color;
+    transform: translateX(-50%) scale(1.1); // un pequeño zoom al pasar el ratón
+  }
 
-                &:hover {
-                    color: $white-color;
+  // Active: cambio de color cuando el h1 es presionado
+  &:active {
+    color: $primary-color;
+  }
+}
 
-                    &:visited {
-                        color: $primary-color;
-                    }
-                }
-            }
+.menu-toggle {
+  z-index: 1;
+  font-size: 1.5rem;
+  background: none;
+  border-radius: 8px;
+  color: $white-color;
+  cursor: pointer;
 
-        }
-    }
+  // Hover: cambio de color cuando el mouse pasa por encima
+  &:hover {
+    color: $light-secondary-color;
+  }
+
+  // Active: cambio de color cuando el botón es presionado
+  &:active {
+    color: $primary-color;
+  }
 }

@@ -13,7 +13,7 @@
         font-family: "Cal Sans", sans-serif; // Cambia la fuente
 
         font-size: 20px;
-        box-shadow: 2px 2px 10px 7px #0c483b;
+        box-shadow:$box-shadow-2;
 
         &:hover {
             color: $light-secondary-color; // Cambia el color del texto al pasar el cursor

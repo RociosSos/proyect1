@@ -16,7 +16,27 @@
   padding: 15px;
   align-items: center;
 font-size: 15px;
-}
+ @media screen and (max-width: map-get($gridbreakpoints, sm) ) {
+            flex-direction: column;
+        }
+        .footer__socialmedia-links {
+            color: $black-color;
+            &:not(:first-child) {
+                margin-left: 1.5rem;
+            }
+            @media screen and (max-width: map-get($gridbreakpoints, sm) ) {
+                margin: 1rem 0;
+            }
+            i {
+                font-size: 1.5rem;
+            }
+            &:hover {
+                color: $strong-primary-color;
+            }
+        }
+    }
+
+
 
 .footer__socialmedia-links {
   color: $white-color; // Color de los íconos

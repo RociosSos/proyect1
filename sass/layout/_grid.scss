@@ -22,3 +22,13 @@
             grid-column: span $i;
         }
     }
+
+    @each $bp, $w in $gridbreakpoints {
+    @for $i from 1 through $grid-columns {
+        .col-#{$bp}-#{$i} {
+            @media screen and (min-width: $w) {
+                grid-column: span #{$i};
+            }
+        }
+    }
+} 
