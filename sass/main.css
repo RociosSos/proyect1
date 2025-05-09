@@ -734,7 +734,8 @@ h3:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  margin-top: auto;
+  padding-bottom: 15px;
 }
 .button button {
   padding: 12px 28px;
@@ -780,4 +781,8 @@ h3:visited {
   margin-bottom: 50px;
   border: 12px ridge, #4E878C;
   box-shadow: 1px 2px 8px 7px #36e6f4;
+}
+
+h2 {
+  font-family: Comic Sans MS, cursive, sans-serif;
 }/*# sourceMappingURL=main.css.map */

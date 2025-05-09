@@ -9,10 +9,10 @@
 
 
 @import "layout/navbar";
+@import "layout/menu";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/footer";
-@import "layout/gallery";
 
 @import "components/slider";
 @import "components/buttons";
@@ -20,5 +20,9 @@
 @import "components/form";
 
 @import "pages/home";
+@import "pages/about-us";
+@import "pages/contact";
+
+
 
 
