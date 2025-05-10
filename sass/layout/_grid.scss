@@ -1,34 +1,27 @@
-.container {
-    margin: 0 auto;
-    @include create-container-width();
+.grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(12, 1fr);
 
+  .card {
+    grid-column: span 3;
+  }
+
+  // Tablet: 2 columnas
+  @media (max-width: map-get($grid-width, sm)) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .card {
+      grid-column: span 1;
+    }
+  }
+
+  // Celular: 1 columna
+  @media (max-width: map-get($grid-width, xs)) {
+    grid-template-columns: 1fr;
+
+    .card {
+      grid-column: span 1;
+    }
+  }
 }
-
-.grid{
-    font-size: 30px;
-    display: grid;
-    grid-template-columns: repeat($grid-columns, 1fr);
-    column-gap: 3rem;
-    row-gap: 3rem;
-    @media screen and (max-width: map-get($gridbreakpoints, sm)) {
-        column-gap: 0.5rem;
-        grid-template-columns: repeat(2, 1fr);
-    }
-        
-    }
-
-    @for $i from 1 through $grid-columns {
-        .col-#{$i} {
-            grid-column: span $i;
-        }
-    }
-
-    @each $bp, $w in $gridbreakpoints {
-    @for $i from 1 through $grid-columns {
-        .col-#{$bp}-#{$i} {
-            @media screen and (min-width: $w) {
-                grid-column: span #{$i};
-            }
-        }
-    }
-} 

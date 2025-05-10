@@ -574,6 +574,29 @@ h2:visited {
   color: rgb(255, 255, 255);
 }
 
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  white-space: nowrap;
+}
+.products::before, .products::after {
+  content: "------";
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 600px) {
+  .products {
+    font-size: 24px;
+  }
+  .products::before, .products::after {
+    content: "---";
+  }
+}
+
 h3 {
   text-align: center;
   font-size: 30px;
@@ -588,533 +611,28 @@ h3:visited {
   color: #00241B;
 }
 
-.container {
-  margin: 0 auto;
-}
-@media (min-width: 0) {
-  .container {
-    max-width: 360px;
-  }
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 520px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 880px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1120px;
-  }
-}
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-
 .grid {
-  font-size: 30px;
   display: grid;
+  gap: 3rem;
   grid-template-columns: repeat(12, 1fr);
-  -moz-column-gap: 3rem;
-       column-gap: 3rem;
-  row-gap: 3rem;
 }
-@media screen and (max-width: 576px) {
-  .grid {
-    -moz-column-gap: 0.5rem;
-         column-gap: 0.5rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.col-1 {
-  grid-column: span 1;
-}
-
-.col-2 {
-  grid-column: span 2;
-}
-
-.col-3 {
+.grid .card {
   grid-column: span 3;
 }
-
-.col-4 {
-  grid-column: span 4;
-}
-
-.col-5 {
-  grid-column: span 5;
-}
-
-.col-6 {
-  grid-column: span 6;
-}
-
-.col-7 {
-  grid-column: span 7;
-}
-
-.col-8 {
-  grid-column: span 8;
-}
-
-.col-9 {
-  grid-column: span 9;
-}
-
-.col-10 {
-  grid-column: span 10;
-}
-
-.col-11 {
-  grid-column: span 11;
-}
-
-.col-12 {
-  grid-column: span 12;
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-1 {
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid .card {
     grid-column: span 1;
   }
 }
-
-@media screen and (min-width: 0) {
-  .col-xs-2 {
-    grid-column: span 2;
+@media (max-width: 360px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-3 {
-    grid-column: span 3;
-  }
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-4 {
-    grid-column: span 4;
-  }
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-5 {
-    grid-column: span 5;
-  }
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-6 {
-    grid-column: span 6;
-  }
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-7 {
-    grid-column: span 7;
-  }
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-8 {
-    grid-column: span 8;
-  }
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-9 {
-    grid-column: span 9;
-  }
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-10 {
-    grid-column: span 10;
-  }
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-11 {
-    grid-column: span 11;
-  }
-}
-
-@media screen and (min-width: 0) {
-  .col-xs-12 {
-    grid-column: span 12;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-1 {
+  .grid .card {
     grid-column: span 1;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-2 {
-    grid-column: span 2;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-3 {
-    grid-column: span 3;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-4 {
-    grid-column: span 4;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-5 {
-    grid-column: span 5;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-6 {
-    grid-column: span 6;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-7 {
-    grid-column: span 7;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-8 {
-    grid-column: span 8;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-9 {
-    grid-column: span 9;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-10 {
-    grid-column: span 10;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-11 {
-    grid-column: span 11;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .col-sm-12 {
-    grid-column: span 12;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-1 {
-    grid-column: span 1;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-2 {
-    grid-column: span 2;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-3 {
-    grid-column: span 3;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-4 {
-    grid-column: span 4;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-5 {
-    grid-column: span 5;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-6 {
-    grid-column: span 6;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-7 {
-    grid-column: span 7;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-8 {
-    grid-column: span 8;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-9 {
-    grid-column: span 9;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-10 {
-    grid-column: span 10;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-11 {
-    grid-column: span 11;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-12 {
-    grid-column: span 12;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-1 {
-    grid-column: span 1;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-2 {
-    grid-column: span 2;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-3 {
-    grid-column: span 3;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-4 {
-    grid-column: span 4;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-5 {
-    grid-column: span 5;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-6 {
-    grid-column: span 6;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-7 {
-    grid-column: span 7;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-8 {
-    grid-column: span 8;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-9 {
-    grid-column: span 9;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-10 {
-    grid-column: span 10;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-11 {
-    grid-column: span 11;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .col-lg-12 {
-    grid-column: span 12;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-1 {
-    grid-column: span 1;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-2 {
-    grid-column: span 2;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-3 {
-    grid-column: span 3;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-4 {
-    grid-column: span 4;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-5 {
-    grid-column: span 5;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-6 {
-    grid-column: span 6;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-7 {
-    grid-column: span 7;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-8 {
-    grid-column: span 8;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-9 {
-    grid-column: span 9;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-10 {
-    grid-column: span 10;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-11 {
-    grid-column: span 11;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .col-xl-12 {
-    grid-column: span 12;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-1 {
-    grid-column: span 1;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-2 {
-    grid-column: span 2;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-3 {
-    grid-column: span 3;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-4 {
-    grid-column: span 4;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-5 {
-    grid-column: span 5;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-6 {
-    grid-column: span 6;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-7 {
-    grid-column: span 7;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-8 {
-    grid-column: span 8;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-9 {
-    grid-column: span 9;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-10 {
-    grid-column: span 10;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-11 {
-    grid-column: span 11;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .col-xxl-12 {
-    grid-column: span 12;
   }
 }
 
@@ -1282,6 +800,35 @@ h3:visited {
   color: #00241B;
 }
 
+@media (max-width: 576px) {
+  .navbar_container {
+    padding: 1rem 1.5rem;
+  }
+  .navbar_content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .navbar_content h1 {
+    position: static;
+    transform: none;
+    text-align: center;
+    font-size: 2rem;
+    transform-origin: center;
+  }
+  .navbar_content h1:hover {
+    transform: scale(1.1);
+  }
+  .navbar_options {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+  .navbar_options ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
 .menu__container {
   position: fixed;
   top: 0;
@@ -1384,22 +931,57 @@ h3:visited {
   border-radius: 0.5rem;
   background-color: #4E878C;
   border: 4px solid rgb(0, 0, 0);
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 0 20px;
   min-height: 300px;
   padding: 1rem;
   box-shadow: 4px 4px 4px #21f3df;
 }
-
 .card img {
   width: 100%;
   height: 200px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px 8px #0c483b;
 }
+.card .card-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #65B891;
+  margin: 0.8rem 0;
+  text-align: center;
+}
 
+@media (max-width: 768px) and (min-width: 576px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+    min-height: auto;
+  }
+  .card img {
+    width: 40%;
+    height: auto;
+    margin-right: 1rem;
+  }
+  .card .card-content {
+    width: 60%;
+  }
+}
+@media (max-width: 576px) {
+  .card {
+    margin: 0 10px;
+    flex-direction: column;
+    min-height: auto;
+    padding: 0.5rem;
+  }
+  .card img {
+    height: 150px;
+  }
+  .card .card-price {
+    font-size: 1.2rem;
+  }
+}
 .imagenPortada {
-  width: 1258px;
+  width: 100%;
+  max-width: 1258px;
   height: 425px;
   margin-top: 50px;
   margin-bottom: 50px;

@@ -105,3 +105,39 @@
     color: $primary-color;
   }
 }
+
+// Al final del archivo _nav.scss (o donde tengas el nav)
+@media (max-width: map-get($gridbreakpoints, sm)) {
+  .navbar_container {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar_content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    h1 {
+      position: static;
+      transform: none;
+      text-align: center;
+      font-size: 2rem;
+      transform-origin: center;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+    .navbar_options {
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    .navbar_options ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }

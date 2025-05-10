@@ -1,11 +1,12 @@
 $gridbreakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px
+    xs: 0,       // Móviles muy pequeños
+    sm: 576px,   // Móviles estándar
+    md: 768px,   // Tablets
+    lg: 992px,   // Laptops
+    xl: 1200px,  // Monitores grandes
+    xxl: 1400px  // Monitores muy grandes
 );
+
 
 $grid-width: (
     xs: 360px,
