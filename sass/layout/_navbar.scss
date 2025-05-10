@@ -1,48 +1,44 @@
 .navbar_container {
   position: relative;
   background-color: $navbar-bg-color;
-  padding: 3rem;
+  padding: 1.5rem 3rem;
   border: 6px double $strong-primary-color;
   box-shadow: $box-shadow-4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .navbar_content {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
+  width: 100%;
   position: relative;
-}
-
-.navbar_content h1 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  color: $white-color;
-  margin: 0;
-  font-size: 3rem; // letra mucho más grande
-  border-bottom: 3px solid $white-color; // subrayado
-  padding-bottom: 0.3rem;
-  transition: color 0.3s ease, transform 0.3s ease; // transiciones suaves
-
-  // Hover: cambio de color cuando el mouse pasa por encima
-  &:hover {
-    color: $light-secondary-color;
-    transform: translateX(-50%) scale(1.1); // un pequeño zoom al pasar el ratón
-  }
-
-  // Active: cambio de color cuando el h1 es presionado
-  &:active {
-    color: $primary-color;
-  }
 }
 
 .menu-toggle {
   z-index: 1;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   background: none;
   border-radius: 8px;
   color: $white-color;
   cursor: pointer;
+  transition: transform 0.3s ease;
+
+  // Cuando el mouse pasa por encima, la animación sigue
+  &:hover {
+    color: $light-secondary-color;
+    animation: fa-bounce 1s infinite; // Agregado "infinite" para mantener la animación
+  }
+
+  // Cuando el mouse no está encima, se detiene la animación
+  &:not(:hover) {
+    animation: none; // Detiene la animación cuando el mouse se aleja
+  }
 
   // Hover: cambio de color cuando el mouse pasa por encima
   &:hover {
@@ -50,6 +46,61 @@
   }
 
   // Active: cambio de color cuando el botón es presionado
+  &:active {
+    color: $primary-color;
+  }
+}
+
+
+.navbar_content h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white-color;
+  margin: 0;
+  font-size: 2.5rem;
+  border-bottom: 3px solid $white-color;
+  padding-bottom: 0.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: $light-secondary-color;
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  &:active {
+    color: $primary-color;
+  }
+}
+
+.navbar_options {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar_options ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar_options li {
+  font-size: 1.2rem;
+}
+
+.navbar_options a {
+  color: $white-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $light-secondary-color;
+  }
+
   &:active {
     color: $primary-color;
   }

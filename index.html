@@ -5,19 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="sass/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <title>Juguetería Cósmica</title>
 </head>
 
 <body>
 
-
 <header class="navbar_container">
   <div class="navbar_content">
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <h1>Juguetería Cósmica</h1>
-    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+  </div>
+
+  <!-- Opciones del navbar -->
+  <div class="navbar_options">
+    <ul>
+      <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="alta.html">Alta</a></li>
+      <li><a href="pages/contact.html">Contacto</a></li>
+    </ul>
   </div>
 </header>
+
+
 
 <aside class="menu__container">
   <div class="menu__navigation">
@@ -181,18 +194,17 @@
 
 
   <footer class="footer__container">
-    <div class="footer__wrapp container">
-      <span>Juguetería Cósmica 2025 ©</span>
-      <div class="d-flex">
-        <a class="footer__socialmedia-links" href="https://www.facebook.com" target="_blank"><i
-            class="fa-brands fa-facebook"></i></a>
-        <a class="footer__socialmedia-links" href="https://www.instagram.com" target="_blank"><i
-            class="fa-brands fa-instagram"></i></a>
-        <a class="footer__socialmedia-links" href="https://www.youtube.com" target="_blank"><i
-            class="fa-brands fa-youtube"></i></a>
-      </div>
-    </div>
-  </footer>
+  <div class="footer__wrapp">
+    <span>Juguetería Cósmica 2025 </span>
+  </div>
+  <div class="footer__socialmedia">
+    <a class="footer__socialmedia-links" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a class="footer__socialmedia-links" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a class="footer__socialmedia-links" href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+</footer>
+
+
  
 
   <script src="js/index.js"></script>

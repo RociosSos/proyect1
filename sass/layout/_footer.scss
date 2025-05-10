@@ -1,50 +1,72 @@
 .footer__container {
   background-color: $primary-color;
-  padding: 1rem; 
-  display: flex; 
-  margin:30px;
+  padding: 0.8rem 0.5rem;
+  margin: 30px;
   border-radius: 3rem;
-
   border: 8px solid $strong-primary-color;
   box-shadow: $box-shadow-4;
-  justify-content: space-between; 
-  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-height: 150px;
 }
 
 .footer__wrapp {
-  display: flex;
-  padding: 15px;
-  align-items: center;
-font-size: 15px;
- @media screen and (max-width: map-get($gridbreakpoints, sm) ) {
-            flex-direction: column;
-        }
-        .footer__socialmedia-links {
-            color: $black-color;
-            &:not(:first-child) {
-                margin-left: 1.5rem;
-            }
-            @media screen and (max-width: map-get($gridbreakpoints, sm) ) {
-                margin: 1rem 0;
-            }
-            i {
-                font-size: 1.5rem;
-            }
-            &:hover {
-                color: $strong-primary-color;
-            }
-        }
-    }
-
-
-
-.footer__socialmedia-links {
-  color: $white-color; // Color de los íconos
-  font-size: 1.5rem; // Tamaño de los íconos
-  margin-left: 1rem; // Espaciado entre los íconos
-  text-decoration: none;
+  position: relative;
+  color: $white-color;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid $white-color;
+  padding-bottom: 0.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-align: center;
 
   &:hover {
-      color: $light-primary-color; // Cambia el color al pasar el cursor
+    color: $light-secondary-color;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    color: $primary-color;
+  }
+}
+
+.footer__socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer__socialmedia-links {
+  color: $white-color;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    animation: bounce 0.5s ease infinite;
+    color: $light-primary-color;
+  }
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
