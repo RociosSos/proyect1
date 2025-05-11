@@ -1,59 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="scss/main.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juguetería Cósmica</title>
+  <link rel="stylesheet" href="sass/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
-<body>
-    <header>
+<body class="alta-page">
+  <header class="navbar_container">
+    <div class="navbar_content">
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <h1 class="animated-title">Juguetería Cósmica</h1>
+    </div>
 
-        <div class="container img">
+    <div class="navbar_options">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="pages/contact.html">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
 
-            <img src="scss/images/ChatGPT Image 14 abr 2025, 06_01_24 p.m..png" alt="Logo de la tienda"
-                class="img__container">
+  <aside class="menu__container">
+    <div class="menu__navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a class="active" href="alta.html">Alta</a></li>
+        <li><a href="pages/contact.html">Contacto</a></li>
+      </ul>
+    </div>
+  </aside>
 
-            <nav>
-                <div class="nav__container">
-                    <li><a href="index.html">Index</a></li>
-                    <li><a href="contacto.html">Contacto </a></li>
-                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
-                    </ul>
-                    <input type="text" name="search" id="search" placeholder="Buscar..." class="input__container">
-                </div>
- </header>
-                <h1>ALTA DE VERGA!!</h1>
+  <main class="content">
+    <h2 class="products animated-title">Alta de Productos</h2>
 
-   
+    <div class="container-form card">
+      <p class="form-intro">Por favor, completá el siguiente formulario para dar de alta un nuevo producto.</p>
 
-    <main class="page__content">
+      <form id="formAltaProducto">
+        <!-- INFORMACIÓN BÁSICA -->
+        <div class="form-section">
+          <h3 class="section-title"><i class="fas fa-info-circle"></i> Información Básica</h3>
 
-        <label for="nameProduct">Nombre del producto</label>
-        <input type="text" id="nameProduct" name="nameProduct" minlength="4" maxlength="50" class="input__container">
-        <label for="price">Precio</label>
-        <input type="number" id="price" name="price" min="1" class="input__container">
-        <label for="stock">Stock</label>
-        <input type="number" id="stock" name="stock" min="0" class="input__container">
-        <label for="description">Descripción</label>
-        <textarea name="description" id="description" class="textarea__container"></textarea>
-        <div>
-            <input type="checkbox" id="freeSend" name="freeSend"><label for="freeSend">Envío
-                gratis</label>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre"><i class="fas fa-tag"></i> Nombre*</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="precio"><i class="fas fa-dollar-sign"></i> Precio*</label>
+              <input type="number" id="precio" name="precio" min="0" step="0.01" required />
+            </div>
+            <div class="form-group">
+              <label for="stock"><i class="fas fa-boxes"></i> Stock*</label>
+              <input type="number" id="stock" name="stock" min="0" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="marca"><i class="fas fa-building"></i> Marca*</label>
+              <input type="text" id="marca" name="marca" required />
+            </div>
+            <div class="form-group">
+              <label for="categoria"><i class="fas fa-list"></i> Categoría*</label>
+              <select id="categoria" name="categoria" required>
+                <option value="">Seleccione...</option>
+                <option value="doodle">Doodle</option>
+                <option value="monopoly">Monopoly</option>
+                <option value="mierdometro">Mierdómetro</option>
+                <option value="estanciero">Estanciero</option>
+                <option value="uno">Uno</option>
+                <option value="tapple">Tapple</option>
+                <option value="no_lo_testeamos">No lo testeamos</option>
+                <option value="exploding_kittens">Exploding Kittens</option>
+                <option value="clue">Clue</option>
+                <option value="hdp">H.D.P.</option>
+                <option value="gran_malo">Gran Malo - Juego de Beber</option>
+                <option value="decisiones">Decisiones de mierda</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary">Guardar producto</button>
-        <button type="reset" class="btn btn-secondary mt-4">Limpiar formulario</button>
-        </form>
-        <div class="square m-6"></div>
 
-        </nav>
+        <!-- DESCRIPCIONES -->
+        <div class="form-section">
+          <h3 class="section-title"><i class="fas fa-align-left"></i> Descripciones</h3>
+          <div class="form-group full-width">
+            <label for="descCorta"><i class="fas fa-comment-alt"></i> Descripción Corta* (max 100 caracteres)</label>
+            <textarea id="descCorta" name="descCorta" maxlength="100" required></textarea>
+          </div>
+          <div class="form-group full-width">
+            <label for="descLarga"><i class="fas fa-align-left"></i> Descripción Larga</label>
+            <textarea id="descLarga" name="descLarga" rows="4"></textarea>
+          </div>
+        </div>
 
-        <footer>
-            <h2>Terrible corchazo esto 2</h2>
-        </footer>
+        <!-- ESPECIFICACIONES -->
+        <div class="form-section">
+          <h3 class="section-title"><i class="fas fa-cog"></i> Especificaciones</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="edadMin"><i class="fas fa-child"></i> Edad Desde*</label>
+              <input type="number" id="edadMin" name="edadMin" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="edadMax"><i class="fas fa-child"></i> Edad Hasta</label>
+              <input type="number" id="edadMax" name="edadMax" min="0" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="envioSinCargo" name="envioSinCargo" />
+                <span><i class="fas fa-truck"></i> Envío sin cargo</span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="foto"><i class="fas fa-camera"></i> Foto* (URL)</label>
+              <input type="url" id="foto" name="foto" placeholder="https://ejemplo.com/imagen.jpg" required />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary" aria-label="Guardar nuevo producto">Guardar Producto</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer__container">
+    <div class="footer__wrapp">
+      <span>Juguetería Cósmica 2025</span>
+    </div>
+    <div class="footer__socialmedia">
+      <a class="footer__socialmedia-links" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a class="footer__socialmedia-links" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a class="footer__socialmedia-links" href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script src="./js/alta.js"></script>
 </body>
 
 </html>

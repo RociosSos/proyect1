@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Comic+Relief:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap');
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+
+    .full-width {
+        grid-column: 1 / -1;
+    }
+}
+
+
+.form-group {
+    label {
+        font-size: 2rem;
+        font-family: "Cal Sans", sans-serif;
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $white-color;
+        font-weight: bold;
+        margin: 2rem;
+
+        i {
+            margin-right: 0.5rem;
+            color: $primary-color;
+        }
+    }
+
+     input, select, textarea {
+      font-family:"Cal Sans", sans-serif;
+      font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid $light-primary-color;
+    border-radius: 12px;
+  box-shadow: $box-shadow-2; } 
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+}

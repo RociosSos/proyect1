@@ -18,6 +18,8 @@ $grid-width: (
 );
 
 
+
+
 $primary-color: #00241B;
 $strong-primary-color: #4E878C;
 $light-primary-color: #06687e;
@@ -69,6 +71,10 @@ $spacings: (
     pl: padding-left,
     pr: padding-right
 );
+// Border
+
+$border-radius: 0.5rem;
+$border: 12px solid #4E878C;
 
 // //boxshadow//
 
@@ -81,3 +87,6 @@ $spacings: (
 
 $footer-bg-color: $white-color; 
 $footer-socialmedia:$light-primary-color
+
+//form
+
