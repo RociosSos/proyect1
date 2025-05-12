@@ -1053,6 +1053,7 @@ h3:visited {
 .about-us__section {
   display: flex;
   height: 70vh;
+  margin-top: 70px;
   border: 23px solid #00241B;
   box-shadow: 2px 2px 10px 7px #0c483b;
 }
@@ -1065,7 +1066,7 @@ h3:visited {
 .about-us__left {
   flex: 1;
   background-color: #00241B;
-  padding: 2rem;
+  padding-right: 25px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1079,6 +1080,7 @@ h3:visited {
   z-index: 1;
 }
 .about-us__left p {
+  margin-left: 20px;
   font-size: 1.25rem;
   color: rgb(255, 255, 255);
   line-height: 1.6;
