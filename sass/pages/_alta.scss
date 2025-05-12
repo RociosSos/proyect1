@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     font-size: 23px;
-    padding: 5rem;
+    padding: 4rem;
     border-radius: 0.5rem;
     background-color: $strong-primary-color;
     border: 4px solid $black-color;
@@ -54,5 +54,23 @@
       transform: scale(1.05);
       color: $secondary-color;
     }
+  }
+}
+
+.btn-1 {
+  background-color: $primary-color;
+  color: $white-color;
+  font-size: 1.5rem;
+  padding: 2rem 3rem;
+  margin: 4rem;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $white-color;
+    box-shadow: $box-shadow-3;
   }
 }
