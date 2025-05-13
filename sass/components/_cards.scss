@@ -1,13 +1,16 @@
 .card {
   display: flex;
   flex-direction: column;
-  border-radius: 0.5rem;
+  border-radius: $border-radius;
   background-color: $strong-primary-color;
   border: 4px solid $black-color;
   margin: 0 20px;
   min-height: 300px;
   padding: 1rem;
   box-shadow: $box-shadow-3;
+  
+  // Aseguramos que el contenido se distribuya correctamente
+  justify-content: space-between; // Esto asegura que el contenido se distribuya, dejando el precio al final
 
   img {
     width: 100%;
@@ -18,7 +21,7 @@
 
   .card-price {
     border: 4px solid $white-color;
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
     box-shadow: $box-shadow-4;
     font-size: 1.6rem;
     font-weight: bold;
@@ -28,6 +31,7 @@
   }
 }
 
+// Medios de pantalla
 @media (max-width: map-get($gridbreakpoints, md)) and (min-width: map-get($gridbreakpoints, sm)) {
   .card {
     flex-direction: row;
@@ -52,6 +56,7 @@
     flex-direction: column;
     min-height: auto;
     padding: 0.5rem;
+    justify-content: space-between; // Asegura que el contenido se distribuya correctamente
 
     img {
       height: 150px;
@@ -61,4 +66,4 @@
       font-size: 1.2rem;
     }
   }
-}
+} 
