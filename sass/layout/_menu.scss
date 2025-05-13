@@ -36,14 +36,12 @@
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Efecto hover */
 .menu__navigation a:hover {
-    color: $light-secondary-color; /* Cambia color al pasar el mouse */
-    border-color: $light-secondary-color; /* Cambia el color del borde */
+    color: $light-secondary-color; 
+    border-color: $light-secondary-color;
 }
 
-/* Efecto visited */
 .menu__navigation a:visited {
-    color: $primary-color; /* Cambia color cuando ya fue visitado */
-    border-color: $primary-color; /* Cambia el color del borde */
+    color: $primary-color; 
+    border-color: $primary-color;
 }

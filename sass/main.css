@@ -1063,6 +1063,7 @@ h3:visited {
     height: auto;
   }
 }
+
 .about-us__left {
   flex: 1;
   background-color: #00241B;
@@ -1070,15 +1071,20 @@ h3:visited {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  transition: transform 0.3s ease-in-out;
 }
+.about-us__left:hover {
+  transform: scale(1.01);
+}
+
 .about-us__left h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: rgb(255, 255, 255);
-  top: 2rem;
-  left: 2rem;
-  z-index: 1;
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
+
 .about-us__left p {
   margin-left: 20px;
   font-size: 1.25rem;
@@ -1087,6 +1093,12 @@ h3:visited {
   max-width: 90%;
   margin-top: 4rem;
 }
+
+.about-us__left:hover h2,
+.about-us__left:hover p {
+  color: #65B891;
+}
+
 .about-us__right {
   flex: 1;
   background-image: url("../images/parents.jpg");

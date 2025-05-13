@@ -33,25 +33,24 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem; // Espacio entre guiones y texto
+  gap: 1rem; 
   font-size: 30px;
   color: $white-color;
   text-align: center;
-  white-space: nowrap; // Evita saltos de línea
+  white-space: nowrap; 
 
-  // Guiones antes y después del texto (sin bordes)
+  
   &::before,
   &::after {
-    content: "------"; // Personaliza la cantidad de guiones
-    color: $white-color; // Mismo color que el texto
+    content: "------"; 
+    color: $white-color; 
   }
 
-  // Ajustes para móvil (opcional)
   @media (max-width: 600px) {
-    font-size: 24px; // Tamaño un poco menor en móvil
+    font-size: 24px; 
     &::before,
     &::after {
-      content: "---"; // Menos guiones en móvil si prefieres
+      content: "---"; 
     }
   }
 }

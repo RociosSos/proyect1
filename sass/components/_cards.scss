@@ -28,7 +28,6 @@
   }
 }
 
-// 💻 Tablets: diseño horizontal (imagen izquierda, texto derecha)
 @media (max-width: map-get($gridbreakpoints, md)) and (min-width: map-get($gridbreakpoints, sm)) {
   .card {
     flex-direction: row;
@@ -47,7 +46,6 @@
   }
 }
 
-// 📱 Móviles: diseño vertical más compacto
 @media (max-width: map-get($gridbreakpoints, sm)) {
   .card {
     margin: 0 10px;

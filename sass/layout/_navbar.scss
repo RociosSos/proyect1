@@ -29,23 +29,19 @@
   cursor: pointer;
   transition: transform 0.3s ease;
 
-  // Cuando el mouse pasa por encima, la animación sigue
   &:hover {
     color: $light-secondary-color;
-    animation: fa-bounce 1s infinite; // Agregado "infinite" para mantener la animación
+    animation: fa-bounce 1s infinite; 
   }
 
-  // Cuando el mouse no está encima, se detiene la animación
   &:not(:hover) {
-    animation: none; // Detiene la animación cuando el mouse se aleja
+    animation: none; 
   }
 
-  // Hover: cambio de color cuando el mouse pasa por encima
   &:hover {
     color: $light-secondary-color;
   }
 
-  // Active: cambio de color cuando el botón es presionado
   &:active {
     color: $primary-color;
   }
@@ -106,7 +102,6 @@
   }
 }
 
-// Al final del archivo _nav.scss (o donde tengas el nav)
 @media (max-width: map-get($gridbreakpoints, sm)) {
   .navbar_container {
     padding: 1rem 1.5rem;

@@ -8,13 +8,13 @@
     background: $primary-color;
     border-radius: $border-radius;
     box-shadow: $box-shadow-2;
-    transition: all 0.3s ease-in-out; // Transición suave para los cambios
+    transition: all 0.3s ease-in-out;
 
     &:hover {
-        background: $light-secondary-color; // Cambia el fondo al pasar el cursor
-        color: $primary-color; // Cambia el color del texto
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); // Aumenta la sombra
-        transform: scale(1.05); // Aumenta ligeramente el tamaño
+        background: $light-secondary-color;
+        color: $primary-color;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
     }
 }
 
